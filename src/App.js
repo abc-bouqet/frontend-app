@@ -14,6 +14,7 @@ function App() {
           setMessage("Error fetching message");
       }
   };
+  
 
   return (
       <div style={{ textAlign: "center", marginTop: "50px" }}>
