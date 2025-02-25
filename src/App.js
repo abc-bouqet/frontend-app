@@ -14,6 +14,7 @@ function App() {
           setMessage("Error fetching message");
       }
   };
+  const userInput = "<img src=x onerror=alert('CodeQL Alert!')>"; // 🚨 CodeQL will flag this
 
   return (
       <div style={{ textAlign: "center", marginTop: "50px" }}>
@@ -21,6 +22,7 @@ function App() {
           <h1>Landing Page</h1>
           <button onClick={fetchMessage}>Get Backend Message</button>
           <p>{message}</p>
+          <p dangerouslySetInnerHTML={{ __html: message }} />
       </div>
   );
 }
